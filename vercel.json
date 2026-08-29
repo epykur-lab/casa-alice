@@ -1,6 +1,12 @@
 {
   "cleanUrls": true,
   "framework": null,
+  "rewrites": [
+    {
+      "source": "/styles.css",
+      "destination": "https://cdn.jsdelivr.net/gh/epykur-lab/casa-alice@main/styles.css"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
