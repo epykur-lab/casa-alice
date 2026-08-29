@@ -51,6 +51,31 @@ h2 { font-family: "Fraunces", Georgia, serif; font-weight: 450; font-size: clamp
 h3 { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 22px; margin: 0 0 8px; }
 .lede { font-size: 18px; color: rgba(251,248,242,0.86); max-width: 46ch; }
 .muted { color: var(--muted); }
+.quote-band {
+  background: var(--sea-deep);
+  color: var(--white);
+  padding: 56px 0 52px;
+  text-align: center;
+}
+.quote-band blockquote {
+  margin: 0 auto;
+  max-width: 34em;
+}
+.quote-pt {
+  font-family: "Fraunces", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(26px, 3.6vw, 40px);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+}
+.quote-tr {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: #f0c9a8;
+}
 .wrap { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
 .section { padding: 88px 0; }
 .section.tight { padding: 56px 0; }
