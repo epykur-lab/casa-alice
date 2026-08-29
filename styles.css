@@ -1,3 +1,4 @@
+/* casa-alice fix4 */
 :root {
   --ink: #1b1714;
   --ink-soft: #3d3832;
@@ -129,7 +130,7 @@ button, input, select, textarea { font: inherit; }
 .hero::after {
   content: "";
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(16,45,55,0.22) 0%, rgba(16,45,55,0.34) 38%, rgba(16,45,55,0.78) 100%);
+  background: linear-gradient(180deg, rgba(16,45,55,0.18) 0%, rgba(16,45,55,0.28) 38%, rgba(16,45,55,0.55) 100%);
 }
 .hero-copy {
   position: relative; z-index: 1;
@@ -138,13 +139,13 @@ button, input, select, textarea { font: inherit; }
   max-width: 740px;
 }
 .hero-glass {
-  background: rgba(251, 248, 242, 0.16);
-  backdrop-filter: blur(18px) saturate(1.15);
-  -webkit-backdrop-filter: blur(18px) saturate(1.15);
-  border: 1px solid rgba(251, 248, 242, 0.32);
-  border-radius: 24px;
+  background: rgba(16, 45, 55, 0.58);
+  backdrop-filter: blur(16px) saturate(1.1);
+  -webkit-backdrop-filter: blur(16px) saturate(1.1);
+  border: 1px solid rgba(251, 248, 242, 0.42);
+  border-radius: 22px;
   padding: 26px 28px 24px;
-  box-shadow: 0 18px 48px rgba(16, 45, 55, 0.22);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
 }
 .hero-glass h1 { text-shadow: 0 2px 16px rgba(16, 45, 55, 0.35); }
 .hero-actions {
