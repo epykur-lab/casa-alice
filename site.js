@@ -92,7 +92,7 @@ function startHeroSlideshow(){
   const root=document.getElementById("hero-slides"); if(!root) return;
   const slides=Array.from(root.querySelectorAll("img")); if(slides.length<2) return;
   if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  let i=0; setInterval(()=>{ slides[i].classList.remove("is-on"); i=(i+1)%slides.length; slides[i].classList.add("is-on"); }, 850);
+  let i=0; setInterval(()=>{ slides[i].classList.remove("is-on"); i=(i+1)%slides.length; slides[i].classList.add("is-on"); }, 1700);
 }
 function hydrateRemotePhotos(){
   const apply=()=>{ if(!window.CA_IMG) return; document.querySelectorAll("img[src]").forEach((img)=>{ const key=img.getAttribute("src"); if(window.CA_IMG[key]) img.src=window.CA_IMG[key]; }); };
