@@ -1,2 +1,5 @@
-# casa-alice
-Casa Alice — Direct-Booking site, Ponta do Sol, Madeira
+# Casa Alice
+
+Direct-booking site for two units above Ponta do Sol, Madeira.
+
+Live: https://epykur-lab.github.io/casa-alice/
