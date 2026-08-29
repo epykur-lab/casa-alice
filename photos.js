@@ -1,12 +1,39 @@
-window.CA_IMG = window.CA_IMG || {};
-(function () {
-  const files = ['photos-1.js', 'photos-2.js', 'photos-3.js', 'photos-4.js', 'photos-5.js', 'photos-6.js', 'photos-7.js', 'photos-8.js', 'photos-9.js', 'photos-10.js', 'photos-11.js', 'photos-12.js', 'photos-13.js', 'photos-14.js'];
-  let left = files.length;
-  files.forEach((src) => {
-    const s = document.createElement("script");
-    s.src = src;
-    s.onload = () => { left -= 1; if (left === 0) window.dispatchEvent(new Event("ca-photos")); };
-    s.onerror = () => { left -= 1; if (left === 0) window.dispatchEvent(new Event("ca-photos")); };
-    document.head.appendChild(s);
-  });
-})();
+window.CA_IMG = {
+  'images/baskets.jpg': 'https://litter.catbox.moe/t6sgv2.jpg',
+  'images/bath.jpg': 'https://litter.catbox.moe/162zta.jpg',
+  'images/bedroom.jpg': 'https://litter.catbox.moe/m0tlqw.jpg',
+  'images/desk.jpg': 'https://litter.catbox.moe/6j478s.jpg',
+  'images/garden-palms.jpg': 'https://litter.catbox.moe/ovelj5.jpg',
+  'images/garden-path.jpg': 'https://litter.catbox.moe/ofm9rn.jpg',
+  'images/hero-terrace.jpg': 'https://litter.catbox.moe/odakrs.jpg',
+  'images/icons/apple-touch-icon.png': 'https://litter.catbox.moe/8r9v16.png',
+  'images/icons/favicon-32.png': 'https://litter.catbox.moe/g119pk.png',
+  'images/icons/favicon.ico': 'https://litter.catbox.moe/dd8s9x.ico',
+  'images/icons/icon-192.png': 'https://litter.catbox.moe/juay4q.png',
+  'images/icons/icon-512.png': 'https://litter.catbox.moe/ss1mst.png',
+  'images/kitchen.jpg': 'https://litter.catbox.moe/kaug16.jpg',
+  'images/living.jpg': 'https://litter.catbox.moe/v2f8c3.jpg',
+  'images/living2.jpg': 'https://litter.catbox.moe/a1dqph.jpg',
+  'images/logo-crop.jpg': 'https://litter.catbox.moe/x5t9fn.jpg',
+  'images/logo-nav.png': 'https://litter.catbox.moe/byob2s.png',
+  'images/logo-original.jpg': 'https://litter.catbox.moe/bxb6tg.jpg',
+  'images/logo.png': 'https://litter.catbox.moe/8eeida.png',
+  'images/pool-day.jpg': 'https://litter.catbox.moe/2w4tj1.jpg',
+  'images/pool-night.jpg': 'https://litter.catbox.moe/0jcoox.jpg',
+  'images/slides/01-pool.jpg': 'https://litter.catbox.moe/rww8kq.jpg',
+  'images/slides/02-garden-sea.jpg': 'https://litter.catbox.moe/4w3780.jpg',
+  'images/slides/03-terrace-flowers.jpg': 'https://litter.catbox.moe/nq56ea.jpg',
+  'images/slides/04-table-sea.jpg': 'https://litter.catbox.moe/uuhjvu.jpg',
+  'images/slides/05-mango.jpg': 'https://litter.catbox.moe/0q7pu0.jpg',
+  'images/slides/06-persimmon-tree.jpg': 'https://litter.catbox.moe/fiehcb.jpg',
+  'images/slides/07-harvest.jpg': 'https://litter.catbox.moe/o7asg5.jpg',
+  'images/slides/08-protea.jpg': 'https://litter.catbox.moe/uhaato.jpg',
+  'images/slides/09-poem-madeira.jpg': 'https://litter.catbox.moe/1qpmy8.jpg',
+  'images/slides/10-hedge-night.jpg': 'https://litter.catbox.moe/7gs0wk.jpg',
+  'images/slides/11-terrace-night.jpg': 'https://litter.catbox.moe/owzbcb.jpg',
+  'images/slides/12-valley-night.jpg': 'https://litter.catbox.moe/lteffr.jpg',
+  'images/slides/13-window-desk.jpg': 'https://litter.catbox.moe/oxmbj9.jpg',
+  'images/slope.jpg': 'https://litter.catbox.moe/87brlv.jpg',
+  'images/terrace-eg.jpg': 'https://litter.catbox.moe/wdsz9j.jpg'
+};
+window.dispatchEvent(new Event('ca-photos'));
