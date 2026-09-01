@@ -52,7 +52,14 @@ const I18N = {
     formOk: "Skeleton only — nothing was sent. Later this lands in our inbox and we block the calendars.",
     busy: "Taken",
     free: "Free",
-    pick: "Selected"
+    pick: "Selected",
+    poemCredit: "Source to come",
+    poemStanzas: [
+      "far out lies\nthe silver train of the moon\non the basalt of the atlantic\nand high the bride shines\nin her aureole.",
+      "out in the sea\nthe cape rests with a blinking eye,\nthe bridegroom stretched long upon the waters,\nand here the steep slopes,",
+      "hills and still-waking gardens\noffer light upon light\nto greet the glittering bridal host\nin the round of the open sky.",
+      "far off the day still holds,\nto close the nocturnal shrine,\nwhen in the radiance of his lady\na court of blossoms awakens\nand unseen, the secret covenant of night\nsuns itself."
+    ]
   },
   de: {
     preview: "Klickgerüst · Fotos echt, Texte und Kalender noch Platzhalter",
@@ -107,7 +114,14 @@ const I18N = {
     formOk: "Nur Gerüst — es wurde nichts verschickt. Später landet das bei uns und wir blocken die Kalender.",
     busy: "Belegt",
     free: "Frei",
-    pick: "Gewählt"
+    pick: "Gewählt",
+    poemCredit: "Quelle folgt",
+    poemStanzas: [
+      "weithin liegt\ndie silberne schleppe des mondes\nauf dem basalt des atlantiks\nund hoch strahlt die braut\nin ihrer aureole.",
+      "draußen im meer\nmit blinkendem auge ruht das kap,\nder bräutigam lang gestreckt auf den wassern,\nund hier die steilen hänge,",
+      "hügel und noch wachenden gärten\nlichter um lichter bieten sie,\ndie glitzernde brautschar zu grüßen\nim rund des offenen himmels.",
+      "ferne noch hält sich der tag,\nden nächtlichen schrein zu schließen,\nwenn im glanz seiner dame\nerwacht ein hofstaat von blüten\nund sich unsichtbar sonnt\nder heimliche bund der nacht."
+    ]
   }
 };
 
@@ -127,6 +141,13 @@ function applyI18n() {
     b.classList.toggle("on", b.dataset.lang === lang());
   });
   document.documentElement.lang = lang();
+  const poem = document.getElementById("home-poem");
+  if (poem) {
+    const stanzas = (I18N[lang()] && I18N[lang()].poemStanzas) || I18N.de.poemStanzas;
+    poem.innerHTML = stanzas
+      .map((s) => `<p>${s.replace(/\n/g, "<br>")}</p>`)
+      .join("");
+  }
 }
 
 function chrome() {
